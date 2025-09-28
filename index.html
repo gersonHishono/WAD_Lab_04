@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 4 - Student Registration </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Student Registration</h1>
+    <form id="regForm">
+      <div class="form-header">Add New Student</div>
+      <div class="form-fields">
+        <label>First Name: <input type="text" id="first" required></label><br>
+        <label>Last Name: <input type="text" id="last" required></label><br>
+        <label>Email: <input type="email" id="email" required></label><br>
+        <label>Programme:
+          <select id="prog" required>
+            <option value="">-- Select --</option>
+            <option>Computer Science</option>
+            <option>Informatics</option>
+            <option>Web Development</option>
+          </select>
+        </label><br>
+        <label>Year:
+          <input type="radio" name="year" value="1" required>1
+          <input type="radio" name="year" value="2">2
+          <input type="radio" name="year" value="3">3
+        </label><br>
+        <label>Interests:<br>
+          <input type="checkbox" name="interests" value="Web Dev">Web Development
+          <input type="checkbox" name="interests" value="Data Science">Data Science
+          <input type="checkbox" name="interests" value="Cybersecurity">Cybersecurity
+        </label><br>
+        <label>Photo URL: <input type="url" id="photo"></label><br>
+        <button type="submit">Add Student</button>
+      </div>
+    </form>
+
+    <h2>Profile Cards</h2>
+    <div id="cards"></div>
+
+    <h2>Summary Table</h2>
+    <table border="1" id="summary">
+      <thead>
+        <tr><th>Name</th><th>Email</th><th>Programme</th><th>Year</th><th>Interests</th><th>Actions</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
